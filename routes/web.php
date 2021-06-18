@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\Category\CategoryController;
 use App\Http\Controllers\Admin\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\User\DashboardController as UserDashboard;
 
@@ -30,6 +31,7 @@ require __DIR__.'/auth.php';
 //Admin Route
 Route::group(['as'=>'admin.', 'prefix'=>'admin', 'namespace'=>'Admin', 'middleware'=>['auth','admin']], function() {
     Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
+    Route::resource('categories', [CategoryController::class]);
 });
 
 //User Route
