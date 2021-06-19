@@ -18,7 +18,7 @@ use App\Http\Controllers\User\DashboardController as UserDashboard;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('front-end.home');
 });
 
 /* Route::get('/dashboard', function () {
@@ -31,11 +31,12 @@ require __DIR__.'/auth.php';
 //Admin Route
 Route::group(['as'=>'admin.', 'prefix'=>'admin', 'namespace'=>'Admin', 'middleware'=>['auth','admin']], function() {
     Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
-    Route::resource('categories', [CategoryController::class]);
+    Route::resource('categories', CategoryController::class);
 });
 
 //User Route
 Route::group(['as'=>'user.', 'prefix'=>'user', 'namespace'=>'User', 'middleware'=>['auth','user']], function() {
     Route::get('dashboard', [UserDashboard::class, 'index'])->name('dashboard');
 });
+
 

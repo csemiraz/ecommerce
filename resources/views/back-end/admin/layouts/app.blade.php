@@ -31,13 +31,13 @@
     <title>Starlight Responsive Bootstrap 4 Admin Template</title>
 
     <!-- vendor css -->
-    <link href="{{ asset('back-end/admin/') }}/lib/font-awesome/css/font-awesome.css" rel="stylesheet">
-    <link href="{{ asset('back-end/admin/') }}/lib/Ionicons/css/ionicons.css" rel="stylesheet">
-    <link href="{{ asset('back-end/admin/') }}/lib/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet">
-    <link href="{{ asset('back-end/admin/') }}/lib/rickshaw/rickshaw.min.css" rel="stylesheet">
+    <link href="{{ asset('assets/back-end/admin/') }}/lib/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="{{ asset('assets/back-end/admin/') }}/lib/Ionicons/css/ionicons.css" rel="stylesheet">
+    <link href="{{ asset('assets/back-end/admin/') }}/lib/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet">
+    <link href="{{ asset('assets/back-end/admin/') }}/lib/rickshaw/rickshaw.min.css" rel="stylesheet">
 
     <!-- Starlight CSS -->
-    <link rel="stylesheet" href="{{ asset('back-end/admin/') }}/css/starlight.css">
+    <link rel="stylesheet" href="{{ asset('assets/back-end/admin/') }}/css/starlight.css">
   </head>
 
   <body>
@@ -61,22 +61,22 @@
     </div><!-- sl-mainpanel -->
     <!-- ########## END: MAIN PANEL ########## -->
 
-    <script src="{{ asset('back-end/admin/') }}/lib/jquery/jquery.js"></script>
-    <script src="{{ asset('back-end/admin/') }}/lib/popper.js/popper.js"></script>
-    <script src="{{ asset('back-end/admin/') }}/lib/bootstrap/bootstrap.js"></script>
-    <script src="{{ asset('back-end/admin/') }}/lib/jquery-ui/jquery-ui.js"></script>
-    <script src="{{ asset('back-end/admin/') }}/lib/perfect-scrollbar/js/perfect-scrollbar.jquery.js"></script>
-    <script src="{{ asset('back-end/admin/') }}/lib/jquery.sparkline.bower/jquery.sparkline.min.js"></script>
-    <script src="{{ asset('back-end/admin/') }}/lib/d3/d3.js"></script>
-    <script src="{{ asset('back-end/admin/') }}/lib/rickshaw/rickshaw.min.js"></script>
-    <script src="{{ asset('back-end/admin/') }}/lib/chart.js/Chart.js"></script>
-    <script src="{{ asset('back-end/admin/') }}/lib/Flot/jquery.flot.js"></script>
-    <script src="{{ asset('back-end/admin/') }}/lib/Flot/jquery.flot.pie.js"></script>
-    <script src="{{ asset('back-end/admin/') }}/lib/Flot/jquery.flot.resize.js"></script>
-    <script src="{{ asset('back-end/admin/') }}/lib/flot-spline/jquery.flot.spline.js"></script>
+    <script src="{{ asset('assets/back-end/admin/') }}/lib/jquery/jquery.js"></script>
+    <script src="{{ asset('assets/back-end/admin/') }}/lib/popper.js/popper.js"></script>
+    <script src="{{ asset('assets/back-end/admin/') }}/lib/bootstrap/bootstrap.js"></script>
+    <script src="{{ asset('assets/back-end/admin/') }}/lib/jquery-ui/jquery-ui.js"></script>
+    <script src="{{ asset('assets/back-end/admin/') }}/lib/perfect-scrollbar/js/perfect-scrollbar.jquery.js"></script>
+    <script src="{{ asset('assets/back-end/admin/') }}/lib/jquery.sparkline.bower/jquery.sparkline.min.js"></script>
+    <script src="{{ asset('assets/back-end/admin/') }}/lib/d3/d3.js"></script>
+    <script src="{{ asset('assets/back-end/admin/') }}/lib/rickshaw/rickshaw.min.js"></script>
+    <script src="{{ asset('assets/back-end/admin/') }}/lib/chart.js/Chart.js"></script>
+    <script src="{{ asset('assets/back-end/admin/') }}/lib/Flot/jquery.flot.js"></script>
+    <script src="{{ asset('assets/back-end/admin/') }}/lib/Flot/jquery.flot.pie.js"></script>
+    <script src="{{ asset('assets/back-end/admin/') }}/lib/Flot/jquery.flot.resize.js"></script>
+    <script src="{{ asset('assets/back-end/admin/') }}/lib/flot-spline/jquery.flot.spline.js"></script>
 
-    <script src="{{ asset('back-end/admin/') }}/js/starlight.js"></script>
-    <script src="{{ asset('back-end/admin/') }}/js/ResizeSensor.js"></script>
-    <script src="{{ asset('back-end/admin/') }}/js/dashboard.js"></script>
+    <script src="{{ asset('assets/back-end/admin/') }}/js/starlight.js"></script>
+    <script src="{{ asset('assets/back-end/admin/') }}/js/ResizeSensor.js"></script>
+    <script src="{{ asset('assets/back-end/admin/') }}/js/dashboard.js"></script>
   </body>
 </html>
