@@ -1,25 +1,28 @@
 @extends('back-end.admin.layouts.app')
+@section('title', 'Category Create')
 @section('content')
-<nav class="breadcrumb sl-breadcrumb">
-    <a class="breadcrumb-item" href="{{ route('admin.dashboard') }}">Home</a>
-    <span class="breadcrumb-item active">Category</span>
-  </nav>
-
-  <div class="sl-pagebody">
-    <div class="row">
-        <div class="col-md-8 offset-md-2">
-            <div class="card">
-                <div class="card-body">
-                    <form action="">
-                        @csrf
-                        <div>
-                            <div class="label" class=" col-form-label">Name</div>
-                            <input type="text" name="name" placeholder="Category Name..." class="form-control">
-                        </div>
-                    </form>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-2 mt-5">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="text-center">Create Category</h4>
+                    <p><a href="{{ route('categories.index') }}" class="btn btn-sm btn-success"><i class="fas fa-tasks"></i> Manage Category</a></p>
+                    </div>
+                    <div class="card-body">
+                        <form action="{{ route('categories.store') }}" method="POST">
+                            @csrf
+                            <div>
+                                <label for="" class="col-form-label">Name</label>
+                                <input type="text" name="name" placeholder="Enter name..." class="form-control">
+                            </div>
+                            <div class="mt-3">
+                                <button class="btn btn-success">Add Category</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-  </div>
 @endsection

@@ -29,8 +29,8 @@ require __DIR__.'/auth.php';
 
 
 //Admin Route
-Route::group(['as'=>'admin.', 'prefix'=>'admin', 'middleware'=>['auth','admin']], function() {
-    Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
+Route::group(['prefix'=>'admin', 'middleware'=>['auth','admin']], function() {
+    Route::get('dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
     Route::resource('categories', CategoryController::class);
 });
 

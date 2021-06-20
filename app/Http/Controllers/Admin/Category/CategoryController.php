@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers\Admin\Category;
 
-use App\Http\Controllers\Controller;
 use App\Models\Category;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Brian2694\Toastr\Facades\Toastr;
 
 class CategoryController extends Controller
 {
@@ -37,7 +38,14 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name' => 'required|unique:categories|max:30',
+        ]);
+        $category = new Category();
+        $category->name = $request->name;
+        $category->save();
+        Toastr::success('Category created successfully...', 'Success');
+        return redirect()->back();
     }
 
     /**
@@ -59,7 +67,7 @@ class CategoryController extends Controller
      */
     public function edit(Category $category)
     {
-        //
+        return view('back-end.admin.category.edit', compact('category'));
     }
 
     /**
@@ -71,7 +79,15 @@ class CategoryController extends Controller
      */
     public function update(Request $request, Category $category)
     {
-        //
+        $request->validate([
+            'name'=>'required',
+        ]);
+
+        $category->name = $request->name;
+        $category->save();
+
+        Toastr::success('Category info updated successfully...', 'Success');
+        return redirect()->route('categories.index');
     }
 
     /**
@@ -82,6 +98,8 @@ class CategoryController extends Controller
      */
     public function destroy(Category $category)
     {
-        //
+        $category->delete();
+        Toastr::success('Category info deleted successfully...', 'Success');
+        return redirect()->back();
     }
 }
