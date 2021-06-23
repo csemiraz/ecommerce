@@ -19,7 +19,7 @@ class SubCategoryController extends Controller
     {
         $categories = Category::all();
         $subCategories = SubCategory::latest()->get();
-        return view('back-end.admin.sub-category.index', compact('subCategories', 'categories'));
+        return view('back-end.admin.category.sub-category.index', compact('subCategories', 'categories'));
     }
 
     /**
@@ -76,7 +76,7 @@ class SubCategoryController extends Controller
     public function edit(SubCategory $subCategory)
     {
         $categories = Category::all();
-        return view('back-end.admin.sub-category.edit', compact('subCategory', 'categories'));
+        return view('back-end.admin.category.sub-category.edit', compact('subCategory', 'categories'));
     }
 
     /**

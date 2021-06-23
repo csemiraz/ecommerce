@@ -17,9 +17,13 @@
                   <nav class="sb-sidenav-menu-nested nav">
                       <a class="nav-link" href="{{ route('categories.index') }}">Category</a>
                       <a class="nav-link" href="{{ route('sub-categories.index') }}">Sub Category</a>
-                      <a class="nav-link" href="{{ route('brands.index') }}">Brand</a>
                   </nav>
               </div>
+
+              <a class="nav-link" href="{{ route('brands.index') }}">
+                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                Brand
+            </a>
 
               <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
                   <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
@@ -55,8 +59,12 @@
               <div class="sb-sidenav-menu-heading">Addons</div>
               <a class="nav-link" href="{{ route('subscribers.index') }}">
                   <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
-                  Subscriber
+                  Coupon
               </a>
+              <a class="nav-link" href="{{ route('subscribers.index') }}">
+                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                Subscriber
+            </a>
               <a class="nav-link" href="tables.html">
                   <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                   Tables

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Admin\Category;
+namespace App\Http\Controllers\Admin;
 
 use Carbon\Carbon;
 use App\Models\Brand;
