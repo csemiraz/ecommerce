@@ -17,6 +17,13 @@
                                 <label for="" class="col-form-label">Name</label>
                                 <input type="text" name="name" value="{{ $category->name }}" class="form-control">
                             </div>
+                            <div>
+                                <label for="" class="col-form-label">Status</label>
+                                <select name="status" class="form-control">
+                                    <option value="1" {{ $category->status==1 ? 'selected' : '' }}>Publish</option>
+                                    <option value="0" {{ $category->status==0 ? 'selected' : '' }}>Unpublish</option>
+                                </select>
+                            </div>
                             <div class="mt-3">
                                 <button class="btn btn-success">Update Category</button>
                             </div>

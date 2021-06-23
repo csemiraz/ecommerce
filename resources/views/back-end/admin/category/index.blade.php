@@ -14,6 +14,7 @@
                         <tr>
                             <th>SL</th>
                             <th>Name</th>
+                            <th>Status</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -22,6 +23,13 @@
                         <tr>
                             <th scope="row">{{ $key+1 }}</th>
                             <td>{{ $category->name }}</td>
+                            <td>
+                                @if($category->status==1)
+                                <span class="btn btn-sm btn-success">Publish</span>
+                                @else
+                                <span class="btn btn-sm btn-warning">Unpublish</span>
+                                @endif
+                            </td>
                             <td>
                                 <a href="{{ route('categories.edit', $category) }}" class="btn btn-sm btn-info">Edit</a>
                                 <a href="#" class="btn btn-sm btn-danger" onclick="deleteData({{ $category->id }})">Delete</a>

@@ -40,9 +40,11 @@ class CategoryController extends Controller
     {
         $request->validate([
             'name' => 'required|unique:categories|max:30',
+            'status' => 'required'
         ]);
         $category = new Category();
         $category->name = $request->name;
+        $category->status = $request->status;
         $category->save();
         Toastr::success('Category created successfully...', 'Success');
         return redirect()->back();
@@ -81,9 +83,11 @@ class CategoryController extends Controller
     {
         $request->validate([
             'name'=>'required',
+            'status' => 'required'
         ]);
 
         $category->name = $request->name;
+        $category->status = $request->status;
         $category->save();
 
         Toastr::success('Category info updated successfully...', 'Success');

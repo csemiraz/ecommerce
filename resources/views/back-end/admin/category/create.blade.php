@@ -16,6 +16,13 @@
                                 <label for="" class="col-form-label">Name</label>
                                 <input type="text" name="name" placeholder="Enter name..." class="form-control">
                             </div>
+                            <div>
+                                <label for="" class="col-form-label">Status</label>
+                                <select name="status" class="form-control">
+                                    <option value="1">Publish</option>
+                                    <option value="0">Unpublish</option>
+                                </select>
+                            </div>
                             <div class="mt-3">
                                 <button class="btn btn-success">Add Category</button>
                             </div>
