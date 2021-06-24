@@ -17,6 +17,7 @@
                                 <tr>
                                     <th>SL</th>
                                     <th>Email</th>
+                                    <th>Subscribe Time</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
@@ -25,6 +26,7 @@
                                 <tr>
                                     <th scope="row">{{ $key+1 }}</th>
                                     <td>{{ $subscriber->email }}</td>
+                                    <td>{{ $subscriber->created_at->diffForHumans() }}</td>
                                     <td>
                                         <a href="#" class="btn btn-sm btn-danger" onclick="deleteData({{ $subscriber->id }})">Delete</a>
                                         <form id="delete-data-{{ $subscriber->id }}" action="{{ route('subscribers.destroy', $subscriber->id) }}" method="POST" style="display: none;">
